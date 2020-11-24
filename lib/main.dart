@@ -35,7 +35,7 @@ class GalleryDemo extends StatelessWidget {
                 return GridView.builder(
                     itemCount: snapshot.data.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2),
+                        crossAxisCount: 3),
                     itemBuilder: (context, index) {
                       return Padding(
                           padding: EdgeInsets.all(5),
@@ -45,7 +45,9 @@ class GalleryDemo extends StatelessWidget {
                                       image: new NetworkImage(
                                           snapshot.data[index]),
                                       fit: BoxFit.cover))));
-                    });
+                    }
+
+                    );
               }
               return Center(child: CircularProgressIndicator());
             },
